@@ -1,0 +1,30 @@
+{
+  "name": "trello-json-to-csv",
+  "version": "1.0.0",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "dev": "node --watch ./dist/app.js",
+    "watch": "tsc -w",
+    "build": "tsc",
+    "start": "node ./dist/app.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "ejs": "^3.1.10",
+    "express": "^4.21.1",
+    "helmet": "^8.0.0",
+    "multer": "^1.4.5-lts.1"
+  },
+  "devDependencies": {
+    "@types/cors": "^2.8.17",
+    "@types/express": "^5.0.0",
+    "@types/helmet": "^0.0.48",
+    "@types/multer": "^1.4.12",
+    "@types/node": "^22.10.6"
+  }
+}

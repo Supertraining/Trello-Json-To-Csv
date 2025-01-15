@@ -1,31 +1,67 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="light">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<html
+  lang="en"
+  data-theme="light"
+>
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
     <title>Trello JSON to CSV Converter</title>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css">
-    <link rel="stylesheet" href="/styles/main.css">
-    <script src="/js/index.js" defer></script>
-</head>
-<body>
-    <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css"
+    />
+    <link
+      rel="stylesheet"
+      href="/styles/main.css"
+    />
+    <script
+      src="/js/index.js"
+      defer
+    ></script>
+  </head>
+  <body>
+    <div class="header">
+      <div>
+        <h1>Trello Board</h1>
+        <h2>JSON to CSV Converter</h2>
+      </div>
+      <button
+        class="theme-toggle"
+        id="theme-toggle"
+        aria-label="Toggle theme"
+      >
         <i class="ri-moon-line"></i>
-    </button>
-
-    <h1>Trello Board</h1>
-    <h2>JSON to CSV Converter</h2> 
+      </button>
+    </div>
 
     <div class="container">
-        <form onSubmit="downloadCSV(event)" method="post" class="file-input-container" id="upload-form">
-            <input type="file" name="file" accept=".json" class="file-input">
-            <div class="file-input-label">
-                <i class="ri-upload-cloud-line file-input-icon"></i>
-                <span class="file-input-text">Drag and drop your Trello JSON file here<br>or click to browse</span>
-            </div>
-            <button type="submit">Convert to CSV</button>
-        </form>
+      <form
+        method="post"
+        class="file-input-container"
+        id="upload-form"
+      >
+        <input
+          type="file"
+          name="file"
+          accept=".json"
+          class="file-input"
+        />
+        <div class="file-input-label">
+          <i class="ri-upload-cloud-line file-input-icon"></i>
+          <span class="file-input-text"
+            >Drag and drop your Trello JSON file here<br />or click to browse</span
+          >
+        </div>
+        <button type="submit">Convert to CSV</button>
+      </form>
     </div>
-</body>
+  </body>
 </html>

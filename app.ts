@@ -4,7 +4,7 @@ import { env } from './src/config/env.js';
 import { middlewares } from './src/config/middleware.js';
 
 
-const app = Server(env.port, router, env.apiPath, middlewares, env.viewEngine);
+const app = Server(env.port, router, middlewares, env.viewEngine);
 
 try {
     await app.start();

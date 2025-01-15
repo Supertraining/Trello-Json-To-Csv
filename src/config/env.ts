@@ -1,6 +1,6 @@
 import { fileURLToPath } from "url";
 import path from "path";
-import { ServerConfig } from "../../interfaces.js";
+import { ServerConfig } from "../interfaces/interfaces.js";
 
 const nodeEnv = process.env.NODE_ENV?.trim();
 
@@ -13,7 +13,7 @@ const __dirname = path.dirname(__filename);
 
 export const env: ServerConfig = {
   port: PORT ? parseInt(PORT) : 4000,
-  apiPath: API_PATH ?? "/trello-json-to-csv",
+//   apiPath: API_PATH ?? "/trello-json-to-csv",
   nodeEnv: NODE_ENV ?? "development",
   corsOrigin: CORS_ORIGIN ?? "*",
   viewEngine: {

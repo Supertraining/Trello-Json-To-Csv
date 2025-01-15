@@ -55,7 +55,7 @@ export interface EngineOptions {
 }
 export interface ServerConfig {
     port: number;
-    apiPath: string;
+    // apiPath: string;
     nodeEnv: string;
     corsOrigin: string;
     viewEngine: EngineOptions;

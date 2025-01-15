@@ -1,10 +1,16 @@
 import fs from "fs";
-import { ListMap, MemberMap, TrelloCard, TrelloList, TrelloMember } from "../../../interfaces.js";
+import {
+  ListMap,
+  MemberMap,
+  TrelloCard,
+  TrelloList,
+  TrelloMember,
+} from "../../interfaces/interfaces.js";
 
 export function jsonToCSV(jsonData: any) {
   const headers = ["Card Name", "List Name", "Description", "Labels", "Due Date", "Members"];
   const rows = [];
-  rows.push(headers.join(",")); 
+  rows.push(headers.join(","));
 
   const listMap: ListMap = {};
   jsonData.lists.forEach((list: TrelloList) => {
@@ -26,7 +32,7 @@ export function jsonToCSV(jsonData: any) {
       const row = [
         `"${card.name.replace(/"/g, '""')}"`, // Escapar comillas dobles
         `"${listName.replace(/"/g, '""')}"`,
-        `"${(card.desc || '').replace(/"/g, '""')}"`,
+        `"${(card.desc || "").replace(/"/g, '""')}"`,
         `"${labelNames}"`,
         `"${dueDate}"`,
         `"${memberNames}"`,
@@ -37,5 +43,3 @@ export function jsonToCSV(jsonData: any) {
 
   return rows.join("\n");
 }
-
-

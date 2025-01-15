@@ -1,7 +1,10 @@
 import { fileURLToPath } from 'url';
 import path from 'path';
 import { ServerConfig } from '../../interfaces.js';
-process.loadEnvFile();
+
+const nodeEnv = process.env.NODE_ENV?.trim();
+
+nodeEnv === "dev" && process.loadEnvFile();
 
 const { PORT, API_PATH, NODE_ENV, CORS_ORIGIN } = process.env;
 

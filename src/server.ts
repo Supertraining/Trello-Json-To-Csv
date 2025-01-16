@@ -2,6 +2,7 @@ import express, { Router } from "express";
 import { EngineOptions } from "./interfaces/interfaces.js";
 import { env } from "./config/env.js";
 
+
 export function Server(
   PORT: number,
   router: Router,
@@ -9,6 +10,7 @@ export function Server(
   middlewares: any,
   engineOptions: EngineOptions
 ) {
+
   return {
     port: PORT || 4000,
     router: router,

@@ -17,6 +17,9 @@ export const CONTROLLERS = {
         res.setHeader("Content-Type", "text/csv");
         res.setHeader("Content-Disposition", "attachment; filename=trello_board.csv");
         res.send(csvData);
+    },
+    holaMundo: async(req: Request, res: Response): Promise<void> => {
+        res.send("Hola Mundo");
     }
 
 }
